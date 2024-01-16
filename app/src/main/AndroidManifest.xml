@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.daqin.medicinegod">
+
+    <!-- 获取手机外部存储读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 手机照片访问权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 通过GPS得到精确位置 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 通过网络得到粗略位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 访问网络，某些位置信息需要从网络服务器获取 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问WiFi状态，需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 修改WiFi状态，发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 访问网络状态, 检测网络的可用性，需要网络运营商相关信息用于网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 蓝牙扫描权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 前台service权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 后台定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!--  电话  -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Medicinegod"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".CustomWidget.MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="提醒药品信息的小组件"
+            android:process=":MedicinesService1" />
+
+
+        <receiver
+            android:name=".CustomWidget.MyWidget"
+            android:exported="true">
+            <intent-filter><!--action:是用来更新我们小部件的行为动作标记-->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widght_config" />
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.daqin.medicinegod"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity
+            android:name="com.daqin.medicinegod.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:requestLegacyExternalStorage="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.daqin.medicinegod.SearchActivity" />
+        <activity android:name="com.daqin.medicinegod.AddActivity" />
+        <activity android:name="com.daqin.medicinegod.DetailEditActivity" />
+        <activity android:name="com.daqin.medicinegod.DetailActivity" />
+        <activity android:name="com.daqin.medicinegod.SearchResultActivity" />
+        <activity android:name="com.daqin.medicinegod.SearchResultCheckActivity" />
+        <activity android:name="com.daqin.medicinegod.LoginActivity" />
+        <activity android:name="com.daqin.medicinegod.RegisterActivity" />
+        <activity android:name="com.daqin.medicinegod.CollageBorrowDetailActivity" />
+        <activity android:name="com.daqin.medicinegod.PersonCenterActivity" />
+        <activity android:name="com.daqin.medicinegod.HistoryExcelActivity" />
+        <activity android:name="com.daqin.medicinegod.ImportActivity" />
+        <activity android:name="com.daqin.medicinegod.NoticeActivity" />
+
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+
+
+    </application>
+
+</manifest>

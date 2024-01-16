@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/m_grey_background"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp">
+
+
+            <Button
+                android:id="@+id/id_collage_collage_name"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:drawableLeft="@drawable/ic_localtion"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="泰山科技学院"
+                android:textColor="@color/m_grey_70"
+                android:textFontWeight="700"
+                android:textSize="22sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/id_collage_b_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_collage_borrow_search"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:hint="请擦亮双眼以防诈骗"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/m_grey_70"
+                android:textColorHint="@color/m_grey_50"
+                android:textFontWeight="500"
+                android:textSize="14sp">
+
+            </EditText>
+
+        </LinearLayout>
+
+
+        <com.daqin.medicinegod.CustomWidget.AutoSwipeRefreshLayout
+            android:id="@+id/id_collage_b_autowwiperefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/id_collage_b_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#00000000">
+
+            </ListView>
+        </com.daqin.medicinegod.CustomWidget.AutoSwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <com.daqin.medicinegod.CustomWidget.DragFloatingActionButton
+        android:id="@+id/id_collage_b_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:contentDescription="发布帖子"
+        android:src="@drawable/ic_collage_b_xuqiu"
+        app:backgroundTint="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

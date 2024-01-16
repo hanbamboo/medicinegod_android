@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:test="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/m_normal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:text="添加新的药品"
+                android:textColor="#ffffff"
+                android:textFontWeight="700"
+                android:textSize="35sp"
+                android:textStyle="bold|italic" />
+
+            <ImageButton
+                android:id="@+id/id_add_import"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/m_transparent"
+                android:contentDescription="从网络上导入"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_add_import" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/id_add_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_add">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="100dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="药品名字"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/id_add_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请填写药品名字"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/m_grey_70"
+                        android:textColorHint="@color/m_grey_20"
+                        android:textFontWeight="300" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品图片"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+
+                    <com.daqin.medicinegod.CustomWidget.RoundImageView
+                        app:type="round"
+                        app:radius="8dp"
+                        android:id="@+id/id_add_img_btn"
+                        android:layout_width="240dp"
+                        android:layout_height="135dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/add_imgadd"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/id_add_img_btn_usedefault"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:padding="5dp"
+                            android:text="设默认图片" />
+
+                        <Button
+                            android:id="@+id/id_add_img_btn_cropimg"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:padding="5dp"
+                            android:text="裁剪" />
+
+                        <Button
+                            android:id="@+id/id_add_img_btn_clear"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:padding="5dp"
+                            android:text="清空" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="药品描述"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/id_add_desp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:hint="请填写药品描述"
+                        android:inputType="textMultiLine"
+                        android:maxLines="5"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/m_grey_70"
+                        android:textColorHint="@color/m_grey_20"
+                        android:textFontWeight="300" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品过期时间"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/id_add_outdate_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="选择过期时间" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品标识"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="UselessParent">
+
+                        <RadioButton
+                            android:id="@+id/idadd_otc_otcr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:text="OTC(非处方药)-红"
+                            android:textColor="@color/m_grey_70"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/idadd_otc_otcg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:text="OTC(非处方药)-绿"
+                            android:textColor="@color/m_grey_70"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/idadd_otc_none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:text="(留空)"
+                            android:textColor="@color/m_grey_70"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/idadd_otc_rx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:text="RX(处方药)"
+                            android:textColor="@color/m_grey_70"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品条码"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <EditText
+                            android:id="@+id/id_add_barcode"
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:hint="请填写药品13位条码"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/m_grey_70"
+                            android:textColorHint="@color/m_grey_20"
+                            android:textFontWeight="300" />
+
+                        <Button
+                            android:id="@+id/id_add_barcode_scan"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:contentDescription="扫描条码"
+                            android:text="扫 码" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品用法用量"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <com.daqin.medicinegod.CustomWidget.FlowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/id_add_usage_1"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:hint="数量"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/m_grey_70"
+                            android:textColorHint="@color/m_grey_20"
+                            android:textFontWeight="300" />
+
+                        <TextView
+                            android:id="@+id/id_add_usage_1_util"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="包"
+                            android:textColor="@color/m_grey_70"
+                            android:textFontWeight="700"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/id_add_usage_2"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:hint="次数"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/m_grey_70"
+                            android:textColorHint="@color/m_grey_20"
+                            android:textFontWeight="300" />
+
+                        <TextView
+                            android:id="@+id/id_add_usage_2_util"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="次"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/m_grey_70"
+                            android:textFontWeight="700"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/id_add_usage_3"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:hint="天次"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/m_grey_70"
+                            android:textColorHint="@color/m_grey_20"
+                            android:textFontWeight="300" />
+
+                        <TextView
+                            android:id="@+id/id_add_usage_3_util"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:text="天"
+                            android:textColor="@color/m_grey_70"
+                            android:textFontWeight="700"
+                            android:textSize="20sp" />
+
+                    </com.daqin.medicinegod.CustomWidget.FlowLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品出产公司"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/id_add_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请填写药品出产公司"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/m_grey_70"
+                        android:textColorHint="@color/m_grey_20"
+                        android:textFontWeight="300" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_add_yu_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品余量(单位:包)"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/id_add_yu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="请填写药品余量"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/m_grey_70"
+                        android:textColorHint="@color/m_grey_20"
+                        android:textFontWeight="300" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品分组"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <Spinner
+                        android:id="@+id/id_add_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/m_grey_70"
+                        android:textColorHint="@color/m_grey_20"
+                        android:textFontWeight="300" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="药品药效标签"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="700"
+                        android:textSize="22sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/id_add_elabel_box"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:hint="请填写药品效果"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/m_grey_70"
+                            android:textColorHint="@color/m_grey_20"
+                            android:textFontWeight="300" />
+
+                        <Button
+                            android:id="@+id/id_add_elabel_add"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="添 加" />
+                    </LinearLayout>
+
+                    <com.daqin.medicinegod.CustomWidget.FlowLayout
+                        android:id="@+id/id_add_elbaelLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/id_add_elabel1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/id_add_elabel2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/id_add_elabel3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/id_add_elabel4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/id_add_elabel5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </com.daqin.medicinegod.CustomWidget.FlowLayout>
+
+                </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/id_add_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="添 加 完 成"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

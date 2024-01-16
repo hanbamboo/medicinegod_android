@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="20dp"
+    android:paddingTop="2dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="2dp">
+
+    <com.daqin.medicinegod.CustomWidget.RoundImageView
+        android:id="@+id/id_dialog_chat_head"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/bg_homepage_card_title_green_nohalf"
+        app:radius="10dp"
+        app:type="round" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_dialog_chat_name"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxWidth="230dp"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:text="用户名名字"
+            android:textColor="@color/black"
+            android:textFontWeight="500"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_dialog_chat_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center|start"
+            android:maxWidth="230dp"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:text="最近的新消息"
+            android:textColor="@color/m_grey_50"
+            android:textFontWeight="300"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_dialog_chat_time"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:text="2020-10-30"
+            android:textColor="@color/m_grey_50"
+            android:textFontWeight="500"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group
+        android:id="@+id/mg_mg"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_home_title"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="所有药品" />
+
+        <item
+            android:id="@+id/navigation_near_title"
+            android:icon="@drawable/ic_right_nav_menu_near"
+            android:title="临期药品" />
+        <item
+            android:id="@+id/navigation_out_title"
+            android:icon="@drawable/ic_right_nav_menu_out"
+            android:title="过期药品" />
+
+    </group>
+    <group
+        android:id="@+id/mg_kind"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_otc_title"
+            android:icon="@drawable/ic_right_nav_menu_otc"
+            android:title="OTC药品" />
+        <item
+            android:id="@+id/navigation_rx_title"
+            android:icon="@drawable/ic_right_nav_menu_rx"
+            android:title="Rx药品" />
+        <item
+            android:id="@+id/navigation_otcnull_title"
+            android:icon="@drawable/ic_right_nav_menu_otcnull"
+            android:title="无类型药品" />
+    </group>
+    <group
+        android:id="@+id/mg_cloud"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_cloud_title"
+            android:icon="@drawable/ic_right_nav_menu_cloud"
+            android:title="管理云端" />
+    </group>
+    <group
+        android:id="@+id/mg_my"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_share_title"
+            android:icon="@drawable/ic_right_nav_menu_share"
+            android:title="分享的药品" />
+        <item
+            android:id="@+id/navigation_love_title"
+            android:icon="@drawable/ic_right_nav_menu_love"
+            android:title="药品收藏箱" />
+        <item
+            android:id="@+id/navigation_recyle_title"
+            android:icon="@drawable/ic_right_nav_menu_recyle"
+            android:title="药品回收站" />
+    </group>
+</menu>

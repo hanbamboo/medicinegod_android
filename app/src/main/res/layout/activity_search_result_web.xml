@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_searchres_webtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:text="网络结果"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="700"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:text="(网络搜索内容仅供参考，身体若有不适，请及时到医院就诊。)"
+            android:textColor="@color/m_out"
+            android:textFontWeight="700"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/id_searchres_pagedown"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/id_searchres_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="1"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/id_searchres_pageup"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:text="+"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:text="药品类型:"
+                android:textColor="@color/m_grey_70"
+                android:textFontWeight="500"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/id_searchres_webres_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/id_searchres_webres"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

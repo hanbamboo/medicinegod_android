@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/id_collage_b_detail_header_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_collage_status_grey"
+        android:gravity="start"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="闲置出借"
+        android:textColor="@color/m_grey_70"
+        android:textFontWeight="500"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/id_collage_b_detail_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="start"
+            android:text="这个是标题标题标题"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <com.daqin.medicinegod.CustomWidget.RoundImageView
+                android:id="@+id/id_collage_b_detail_header_head"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/add_imgdefault"
+                app:radius="20dp"
+                app:type="round" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_collage_b_detail_header_sname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="end"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="用户名用户名用户名用户名用户名"
+                    android:textColor="@color/black"
+                    android:textFontWeight="500"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/id_collage_b_detail_header_mystyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:ellipsize="end"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="签名签名签名签名签名签名签名"
+                    android:textColor="@color/m_grey_50"
+                    android:textFontWeight="300"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/id_collage_b_detail_header_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:hint="请填写帖子内容"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/m_grey_70"
+            android:textFontWeight="500"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/id_collage_b_detail_header_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="2dp"
+            android:text="2020年10年10月3时3分3秒"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/m_grey_50"
+            android:textFontWeight="500"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <com.daqin.medicinegod.CustomWidget.RoundImageView
+                android:id="@+id/id_collage_b_detail_header_img"
+                android:layout_width="320dp"
+                android:layout_height="180dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/add_imgdefault"
+                android:visibility="gone"
+                app:radius="10dp"
+                app:type="round" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_dialog"
+            android:elevation="2dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_collage_b_detail_header_toname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:hint="联系人：某先生"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/m_grey_50"
+                android:textFontWeight="300"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/id_collage_b_detail_header_tophone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:drawableRight="@drawable/ic_call"
+                android:hint="联系方式：12345678901"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/m_grey_50"
+                android:textFontWeight="300"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/id_collage_b_detail_header_toaddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="15dp"
+                android:drawableRight="@drawable/ic_copy"
+                android:hint="联系地址：书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院书园书院"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/m_grey_50"
+                android:textFontWeight="300"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/id_collage_b_detail_header_text"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:hint="或许...留个言？"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/black"
+                android:textFontWeight="500" />
+
+            <Button
+                android:id="@+id/id_collage_b_detail_header_tijiao"
+                style="?attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提 交" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

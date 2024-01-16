@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_homepage_drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="5dp"
+
+    tools:context=".Fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.daqin.medicinegod.CustomWidget.DragFloatingActionButton
+            android:id="@+id/id_homepage_toadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:src="@drawable/ic_add_black_24dp"
+            app:backgroundTint="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:scrollEnable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+<!--        <com.daqin.medicinegod.CustomWidget.DragFloatingActionButton-->
+<!--            android:id="@+id/id_homepage_totop"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:clickable="true"-->
+<!--            android:src="@drawable/ic_totop_black_24dp"-->
+<!--            app:backgroundTint="#ffffff"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.98"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.85"-->
+<!--            app:scrollEnable="true"-->
+<!--            tools:ignore="SpeakableTextPresentCheck" />-->
+
+        <FrameLayout
+            android:id="@+id/nav_host_fragment_content_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageButton
+                    android:id="@+id/id_homepage_more"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/m_transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_home_more" />
+
+                <TextView
+                    android:id="@+id/id_homepage_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="-4dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="所有药品(0)个"
+                    android:textFontWeight="700"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="-4dp"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="5dp">
+
+                    <ImageButton
+                        android:id="@+id/id_homepage_load"
+                        android:layout_width="28dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/m_transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_load_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/id_homepage_upAndDown"
+                        android:layout_width="28dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/m_transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_updown_black_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/id_homepage_search"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/m_transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_search_black_24dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/id_homepage_sp_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp" />
+
+                <Spinner
+                    android:id="@+id/id_homepage_sp_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+
+
+            <com.daqin.medicinegod.CustomWidget.AutoSwipeRefreshLayout
+                android:id="@+id/id_homepage_SwipeRefreshLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <com.baoyz.swipemenulistview.SwipeMenuListView
+                    android:id="@+id/homepagelist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <!-- android:divider="#00000000"-->
+                </com.baoyz.swipemenulistview.SwipeMenuListView>
+            </com.daqin.medicinegod.CustomWidget.AutoSwipeRefreshLayout>
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--滑动菜单布局-->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_home"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_main_header"
+        app:menu="@menu/right_nav_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_intel_title"
+    >
+    <fragment
+        android:id="@+id/navigation_intel_title"
+        android:name="com.daqin.medicinegod.Fragment.IntelFragment"
+        android:label="@string/title_intel"
+        tools:layout="@layout/fragment_intel" />
+    <fragment
+        android:id="@+id/navigation_home_title"
+        android:name="com.daqin.medicinegod.Fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_collage_title"
+        android:name="com.daqin.medicinegod.Fragment.CollageFragment"
+        android:label="@string/title_collage"
+        tools:layout="@layout/fragment_collage" />
+    <fragment
+        android:id="@+id/navigation_community_title"
+        android:name="com.daqin.medicinegod.Fragment.ChatFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat" />
+
+
+    <fragment
+        android:id="@+id/navigation_me_title"
+        android:name="com.daqin.medicinegod.Fragment.MeFragment"
+        android:label="@string/title_me" />
+
+    <fragment
+        android:id="@+id/navigation_near_title"
+        android:name="com.daqin.medicinegod.Fragment.NearFragment"
+        android:label="临期药品"
+        tools:layout="@layout/fragment_near" />
+
+    <fragment
+        android:id="@+id/navigation_out_title"
+        android:name="com.daqin.medicinegod.Fragment.OutFragment"
+        android:label="过期药品"
+        tools:layout="@layout/fragment_out" />
+    <fragment
+        android:id="@+id/navigation_otc_title"
+        android:name="com.daqin.medicinegod.Fragment.OtcFragment"
+        android:label="OTC药品"
+        tools:layout="@layout/fragment_otc" />
+    <fragment
+        android:id="@+id/navigation_rx_title"
+        android:name="com.daqin.medicinegod.Fragment.RxFragment"
+        android:label="RX药品"
+        tools:layout="@layout/fragment_rx" />
+
+    <fragment
+        android:id="@+id/navigation_otcnull_title"
+        android:name="com.daqin.medicinegod.Fragment.OtcNullFragment"
+        android:label="无类型药品"
+        tools:layout="@layout/fragment_otcnull" />
+    <fragment
+        android:id="@+id/navigation_cloud_title"
+        android:name="com.daqin.medicinegod.Fragment.CloudFragment"
+        android:label="云端药品"
+        tools:layout="@layout/fragment_cloud" />
+    <fragment
+        android:id="@+id/navigation_share_title"
+        android:name="com.daqin.medicinegod.Fragment.ShareFragment"
+        android:label="分享药品"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/navigation_love_title"
+        android:name="com.daqin.medicinegod.Fragment.loveFragment"
+        android:label="药品收藏箱"
+        tools:layout="@layout/fragment_love" />
+    <fragment
+        android:id="@+id/navigation_recyle_title"
+        android:name="com.daqin.medicinegod.Fragment.RecyleFragment"
+        android:label="药品回收站"
+        tools:layout="@layout/fragment_recyle" />
+</navigation>

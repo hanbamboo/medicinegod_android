@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="medicine_method">
+        <item>西药</item>
+        <item>中成药</item>
+        <item>保健药</item>
+        <item>中药材</item>
+    </string-array>
+    <string-array name="show_method">
+        <item>有效期限(由近到远)</item>
+        <item>有效期限(由远到近)</item>
+        <item>存储时间(由远到近)</item>
+        <item>存储时间(由近到远)</item>
+    </string-array>
+    <string-array name="cloud_method">
+        <item>选择性上传</item>
+        <item>选择性下载</item>
+        <item>将所有药品上传到云端</item>
+        <item>将云端药品下载到本机</item>
+    </string-array>
+    <string-array name="load_method">
+        <item>导出(.xls)模板文件</item>
+        <item>以(.xls)文件导入</item>
+        <item>以(.xls)文件导出</item>
+        <item>浏览文件记录</item>
+    </string-array>
+    <string-array name="borrow_method">
+        <item>仅看闲置出借</item>
+        <item>仅看药品需求</item>
+        <item>仅看药品交换</item>
+        <item>查看所有内容</item>
+    </string-array>
+    <string-array name="medicine_group">
+        <item>默认</item>
+    </string-array>
+
+</resources>

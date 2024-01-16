@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="start|bottom|center_vertical"
+        android:orientation="horizontal">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/icon"
+            app:type="round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:text="设置"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text=""
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_setting_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="×"
+                android:textColor="@color/m_grey_50"
+                android:textFontWeight="700"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
+
+
+        <Switch
+            android:id="@+id/id_dialog_setting_idkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="5dp"
+            android:text="开启ID显示（便于区分相同药品）"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:enabled="false"
+            android:padding="5dp"
+            android:text="开启老人模式"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+</LinearLayout>
+

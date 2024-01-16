@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/m_grey_background"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="群组与朋友"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="2dp">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_homepage_card_title_green_nohalf"
+            android:scaleType="center"
+            android:src="@mipmap/chat_group"
+            app:radius="10dp"
+            app:type="round" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="群组列表"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="300"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="2dp">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_homepage_card_title_green_nohalf"
+            android:scaleType="center"
+            android:src="@mipmap/chat_friend"
+            app:radius="10dp"
+            app:type="round" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="好友列表"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="300"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="2dp">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_homepage_card_title_green_nohalf"
+            android:scaleType="center"
+            android:src="@mipmap/chat_noway"
+            app:radius="10dp"
+            app:type="round" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="黑名单"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="300"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="2dp">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_homepage_card_title_green_nohalf"
+            android:scaleType="center"
+            android:src="@mipmap/chat_kefu"
+            app:radius="10dp"
+            app:type="round" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="我的客服"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="300"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="7dp">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_homepage_card_title_green_nohalf"
+            android:scaleType="center"
+            android:src="@mipmap/chat_chatroom"
+            app:radius="10dp"
+            app:type="round" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="药神朋友们"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="300"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/m_grey_background"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+
+            android:text="最近聊天"
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

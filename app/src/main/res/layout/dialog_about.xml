@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_dialog"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal">
+
+        <com.daqin.medicinegod.CustomWidget.RoundImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/icon"
+            app:type="round" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:text="关于药神"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text=""
+            android:textColor="@color/m_grey_70"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_about_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="×"
+                android:textColor="@color/m_grey_50"
+                android:textFontWeight="700"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/m_transparent"
+        android:contentDescription="图标"
+        android:elevation="5dp"
+        android:src="@mipmap/icon" />
+
+    <TextView
+        android:id="@+id/id_about_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:text="药神APP\n\n   APP通过不定量输入（导入）自己的药品，对加入的药品实现可视化管理，还可以通过自带校园内部社区发布闲置、借药等需求信息等其他功能。\n\n作者：daqindaqin\n联系方式：wfgmqhx@163.com"
+        android:textColor="@color/m_grey_90"
+        android:textFontWeight="700"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+

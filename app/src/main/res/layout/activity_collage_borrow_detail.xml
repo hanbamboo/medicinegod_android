@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    tools:context=".CollageBorrowDetailActivity">
+
+    <com.daqin.medicinegod.CustomWidget.AutoSwipeRefreshLayout
+        android:id="@+id/id_collage_b_detail_freshlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            tools:listheader="@layout/activity_collage_borrow_detail_header"
+            android:id="@+id/id_collage_b_detail_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/m_grey_background"
+            android:divider="#00000000">
+
+        </ListView>
+    </com.daqin.medicinegod.CustomWidget.AutoSwipeRefreshLayout>
+</LinearLayout>
+

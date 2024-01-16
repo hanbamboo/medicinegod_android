@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.layout_width.com/apk/res-auto"
+    xmlns:layout_width="http://schemas.layout_width.com/apk/res/layout_width"
+    xmlns:tools="http://schemas.layout_width.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+
+    <!--底部-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|top"
+            android:orientation="vertical">
+
+            <!--图像-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/id_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/add_imgdefault" />
+
+                <ImageView
+                    android:id="@+id/id_detail_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_collage_status_blue"
+                    android:src="@drawable/ic_back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/id_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="药品名字好几个字试试"
+                android:textColor="@color/m_grey_70"
+                android:textFontWeight="700"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+
+                <LinearLayout
+                    android:id="@+id/id_detail_love_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_love_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_love_no" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="喜欢"
+                        android:textColor="@color/m_out_70"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_detail_edit_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_edit_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="编辑"
+                        android:textColor="#F8C478"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_detail_copy_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_copy_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_copy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="复制"
+                        android:textColor="@color/m_blue_80"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_detail_trans_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_trans_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_trans" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="转换"
+                        android:textColor="#C68CD0"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_detail_use_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_use_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_use" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用"
+                        android:textColor="@color/m_normal_70"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_detail_share_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_share_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_share" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分享"
+                        android:textColor="#C68CD0"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/id_detail_delete_ic_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/id_detail_delete_ic"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/dtl_mdc_delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="删除"
+                        android:textColor="@color/m_out_70"
+                        android:textFontWeight="300"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--描述-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_desp_24dp" />
+
+                <TextView
+                    android:id="@+id/id_detail_desp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述"
+                    android:textColor="@color/m_grey_70"
+                    android:textFontWeight="500"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!--标签-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_detail_elabel_24dp" />
+
+                <com.daqin.medicinegod.CustomWidget.FlowLayout
+                    android:id="@+id/id_detail_flowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </com.daqin.medicinegod.CustomWidget.FlowLayout>
+
+
+            </LinearLayout>
+            <!--过期时间-->
+            <LinearLayout
+                android:id="@+id/id_detail_outdate_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_outdate_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_detail_outdate1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="距过期还有 1999 天"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="500"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/id_detail_outdate2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="距过期还有 1999 天"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="500"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--otc-->
+            <LinearLayout
+                android:id="@+id/id_detail_otc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_otc_24dp" />
+
+
+                <TextView
+                    android:id="@+id/id_detail_otc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_homepage_card"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="OTC (非处方药)"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <!--组别-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_group_24dp" />
+
+                <TextView
+                    android:id="@+id/id_detail_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_homepage_card"
+                    android:elevation="3dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="[ 默认 ] 分组"
+                    android:textAlignment="center"
+                    android:textColor="@color/m_normal_70"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+            <!--条码-->
+            <LinearLayout
+                android:id="@+id/id_detail_barcode_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_barcode_24dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_detail_barcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="123456789012"
+                        android:textColor="@color/m_grey_70"
+                        android:textFontWeight="500"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/id_detail_barcode_img"
+                        android:layout_width="170dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--用量-->
+            <LinearLayout
+                android:id="@+id/id_detail_usage_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_usage_24dp" />
+
+                <TextView
+                    android:id="@+id/id_detail_usage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="1包/3次/天"
+                    android:textColor="@color/m_grey_70"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!--余量-->
+            <LinearLayout
+                android:id="@+id/id_detail_yu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_yu_24dp" />
+
+                <TextView
+                    android:id="@+id/id_detail_yu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="剩余 9999 包"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/m_grey_70"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <!--公司-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top|center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="30dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_detail_company_24dp" />
+
+                <TextView
+                    android:id="@+id/id_detail_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="大老板大老板大老板大老板有限集团公司"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/m_grey_70"
+                    android:textFontWeight="500"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <!--操作-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="100dp">
+
+                <TextView
+                    android:id="@+id/id_detail_copy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_detail_copy"
+                    android:gravity="center|center_vertical"
+                    android:padding="10dp"
+                    android:text="复制一份此药品"
+                    android:textAlignment="center"
+                    android:textColor="@color/m_blue_80"
+                    android:textFontWeight="700"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/id_detail_w2l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_detail_w2l"
+                    android:gravity="center|center_vertical"
+                    android:padding="10dp"
+                    android:text="转存为本地药品"
+                    android:textAlignment="center"
+                    android:textColor="@color/m_normal_70"
+                    android:textFontWeight="700"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/id_detail_del"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_detail_delete"
+                    android:gravity="center|center_vertical"
+                    android:padding="10dp"
+                    android:text="删除此条药品"
+                    android:textColor="@color/white"
+                    android:textFontWeight="700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
